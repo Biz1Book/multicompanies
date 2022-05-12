@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from '../auth.service';
 import * as jq from 'jquery';
+import { FormsModule } from '@angular/forms';
 declare var $: any; // ADD THIS
 @Component({
   selector: 'app-header',
@@ -129,10 +130,11 @@ const getMenuData: any[] = [
     children: [],
   },
   {
-    title: 'Timewise Report',
-    url: '/timewisereport',
+    title: 'Enquiry Orders',
+    url: '/enquiryorders',
     icon: 'fa fa-pie-chart',
-    hidden: true,
+    svg: '../../assets/svg/phone-incoming.svg',
+    hidden: false,
     roles: ['admin'],
     count: 4,
     isCollapsed: true,

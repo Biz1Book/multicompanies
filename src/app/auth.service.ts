@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
   baseurl = 'https://biz1pos.azurewebsites.net/api/';
+  baseurl2 = 'https://biz1ecom.azurewebsites.net/api/';
 
   public loggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
     false
@@ -120,6 +121,12 @@ export class AuthService {
   getCompanySPG(companyid: number) {
     return this.http.get(
       this.baseurl + 'SaleProductGroup/GetSaleProducts?companyid=' + companyid
+    );
+  }
+
+  getAllstores() {
+    return this.http.get(
+      this.baseurl2 + 'Ecommerce/getallStores'
     );
   }
 }

@@ -1,0 +1,24 @@
+
+
+<div class="hk-pg-wrapper">
+    <nav class="hk-breadcrumb" aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-light bg-transparent">
+            <li class="breadcrumb-item active" aria-current="page">Enquiry Orders</li>
+        </ol>
+    </nav>
+    <div class="col-xl-12">
+        <section class="hk-sec-wrapper">
+            <div class="form-group col-sm-3">
+                <label>Stores</label>
+                <select class="form-control custom-select" [(ngModel)]="storeId"
+                    aria-placeholder="Select Store">
+                    <option *ngFor="let store of Stores" value={{store.Id}}>
+                       {{store.Name}}
+                    </option>
+                </select>
+            </div>
+        </section>
+        StoreId: {{storeId}}
+    </div>
+</div>
+
